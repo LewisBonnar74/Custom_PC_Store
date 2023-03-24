@@ -11,4 +11,5 @@ You should be able to create a PC using one of each component the list of compon
 Extensions:
 
 Be able to add your PC to a cart and have a cart total. (potentially a checkout/purchase page)
+
 Get a performance mark based on the components you have selected.
