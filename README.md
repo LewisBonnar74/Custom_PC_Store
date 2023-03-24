@@ -2,7 +2,7 @@ Python Project
 
 Build your own PC
 
-You've been tasked with making an app for creating custom PCs. This app gives you the option to create your own PC from scratch, from the list of available components. The store will have a name, the PCs themselves will have a name and a list of components. Finally each component will have a name and a price.
+You've been tasked with making an app for creating custom PCs. This app gives you the option to create your own PC from scratch, from the list of available components. The store will have a name, the PCs themselves will have a name, a list of components and a total price based on those components. Finally each component will have a name and a price.
 
 MVP
 
