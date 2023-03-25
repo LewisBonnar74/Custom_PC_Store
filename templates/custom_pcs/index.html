@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+
+{% for custom_pc in all_custom_pcs %}
+<hr>
+    <div>
+        <div>
+              <span><a href="/custom_pcs/{{custom_pc.id}}">{{custom_pc.name}}</a></span>
+              <span> Price: {{custom_pc.total_price}}</span>
+              <div>
+                <ul><strong>Specs:</strong> 
+                <p>GPU : {{ custom_pc.gpu.name }}</p>
+                <p>CPU : {{ custom_pc.cpu.name }}</p>
+                <p>RAM : {{ custom_pc.ram.name }}</p>
+                <p>Motherboard: {{ custom_pc.motherboard.name }}</p>
+                <p>PSU : {{ custom_pc.psu.name }}</p>
+                </ul>
+              </div> 
+            <div>
+      
+              <form action="/custom_pcs/{{custom_pc.id}}/delete" method="POST">
+                <button><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+              </form>
+      
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}
