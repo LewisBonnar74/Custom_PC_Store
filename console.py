@@ -11,6 +11,13 @@ import repositories.motherboard_repository as motherboard_repository
 import repositories.psu_repository as psu_repository
 import repositories.custom_pc_repository as custom_pc_repository
 
+custom_pc_repository.delete_all()
+gpu_repository.delete_all()
+cpu_repository.delete_all()
+ram_repository.delete_all()
+motherboard_repository.delete_all()
+psu_repository.delete_all()
+
 gpu1 = GPU("RTX 4080", 1000)
 gpu_repository.save(gpu1)
 cpu1 = CPU("i5 13600k", 250)

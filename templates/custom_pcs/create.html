@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
+<div>
+    {% for gpu, cpu, ram, motherboard, psu in zip(gpus, cpus, rams, motherboards, psus) %}
+    Price: {{gpu.price+cpu.price+ram.price+motherboard.price+psu.price}}
+    {% endfor %}
+</div>
     <form action="/custom_pcs" method="post">
         <div>
             <label for="name">Name:</label>
@@ -8,19 +13,51 @@
 
         <div>
             <label for="gpu">GPU:</label>
-            <select name="gpu" id="gpu">
+            <select name="gpu" id="gpu" required>
                 {% for gpu in gpus %}
+                <option value="" disabled selected>Choose your GPU</option>
                 <option value="{{ gpu.name }}">{{ gpu.name }}</option>
                 {% endfor %}
             </select>
         </div>
         <div>
             <label for="cpu">CPU:</label>
-            <select name="cpu" id="cpu">
+            <select name="cpu" id="cpu" required>
                 {% for cpu in cpus %}
+                <option value="" disabled selected>Choose your CPU</option>
                 <option value="{{ cpu.name }}">{{ cpu.name }}</option>
                 {% endfor %}
             </select>
         </div>
+        <div>
+            <label for="ram">RAM:</label>
+            <select name="ram" id="ram" required>
+                {% for ram in rams %}
+                <option value="" disabled selected>Choose your RAM</option>
+                <option value="{{ ram.name }}">{{ ram.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="motherboard">Motherboard:</label>
+            <select name="motherboard" id="motherboard" required>
+                {% for motherboard in motherboards %}
+                <option value="" disabled selected>Choose your Motherboard</option>
+                <option value="{{ motherboard.name }}">{{ motherboard.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="psu">PSU:</label>
+            <select name="psu" id="psu" required>
+                {% for psu in psus %}
+                <option value="" disabled selected>Choose your PSU</option>
+                <option value="{{ psu.name }}">{{ psu.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <button type="submit">Create your new PC!</button>
     </form>
+    
 {% endblock %}
