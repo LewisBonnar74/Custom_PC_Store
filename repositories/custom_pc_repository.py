@@ -51,3 +51,13 @@ def select(id):
         psu = psu_repository.select(result['psu_id'])
         custom_pc = Custom_PC(result['name'], result['total_price'], gpu, cpu, ram, motherboard, psu, result['id'] )
     return custom_pc
+
+def delete_all():
+    sql = "DELETE from custom_pcs"
+    run_sql(sql)
+
+    
+def delete(id):
+    sql = "DELETE FROM custom_pcs WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

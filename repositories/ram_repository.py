@@ -36,3 +36,12 @@ def select(id):
         result = results[0]
         ram = RAM(result['name'], result['price'], result['id'] )
     return ram
+
+def delete_all():
+    sql = "DELETE FROM rams"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM rams WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

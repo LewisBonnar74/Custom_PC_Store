@@ -36,3 +36,12 @@ def select(id):
         result = results[0]
         motherboard = Motherboard(result['name'], result['price'], result['id'] )
     return motherboard
+
+def delete_all():
+    sql = "DELETE FROM motherboards"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM motherboards WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

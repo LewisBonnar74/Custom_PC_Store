@@ -36,3 +36,13 @@ def select(id):
         result = results[0]
         cpu = CPU(result['name'], result['price'], result['id'] )
     return cpu
+
+def delete_all():
+    sql = "DELETE FROM cpus"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM cpus WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+    

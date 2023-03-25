@@ -18,3 +18,12 @@ custom_pc_blueprint = Blueprint("custom_pcs", __name__)
 def custom_pcs():
     custom_pcs = custom_pc_repository.select_all() 
     return render_template("custom_pcs/index.html", all_custom_pcs = custom_pcs)
+
+@custom_pc_blueprint.route("/custom_pcs/create", methods=['GET'])
+def new_task():
+    gpus = gpu_repository.select_all()
+    cpus = cpu_repository.select_all()
+    rams = ram_repository.select_all()
+    motherboards = motherboard_repository.select_all()
+    psus = psu_repository.select_all()
+    return render_template("custom_pcs/create.html", gpus = gpus, cpus = cpus, rams = rams, motherboards = motherboards, psus = psus)

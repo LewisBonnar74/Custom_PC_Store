@@ -36,3 +36,12 @@ def select(id):
         result = results[0]
         psu = PSU(result['name'], result['price'], result['id'] )
     return psu
+
+def delete_all():
+    sql = "DELETE FROM psus"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM psus WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)

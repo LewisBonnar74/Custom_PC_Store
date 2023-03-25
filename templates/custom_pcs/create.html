@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form action="/custom_pcs" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" required autofocus>
+        </div>
+
+        <div>
+            <label for="gpu">GPU:</label>
+            <select name="gpu" id="gpu">
+                {% for gpu in gpus %}
+                <option value="{{ gpu.name }}">{{ gpu.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="cpu">CPU:</label>
+            <select name="cpu" id="cpu">
+                {% for cpu in cpus %}
+                <option value="{{ cpu.name }}">{{ cpu.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </form>
+{% endblock %}

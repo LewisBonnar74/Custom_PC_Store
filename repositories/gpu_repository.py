@@ -36,3 +36,12 @@ def select(id):
         result = results[0]
         gpu = GPU(result['name'], result['price'], result['id'] )
     return gpu
+
+def delete_all():
+    sql = "DELETE FROM gpus"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM gpus WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
