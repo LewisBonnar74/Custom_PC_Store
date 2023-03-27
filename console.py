@@ -29,6 +29,8 @@ motherboard_repository.save(motherboard1)
 psu1 = PSU("1000w", 300)
 psu_repository.save(psu1)
 
+components = [gpu1, cpu1, ram1, motherboard1, psu1]
+
 gpu_repository.select_all()
 cpu_repository.select_all()
 ram_repository.select_all()

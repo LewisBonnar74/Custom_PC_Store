@@ -27,15 +27,30 @@ def new_task():
     rams = ram_repository.select_all()
     motherboards = motherboard_repository.select_all()
     psus = psu_repository.select_all()
-    return render_template("custom_pcs/create.html", gpus = gpus, cpus = cpus, rams = rams, motherboards = motherboards, psus = psus, zip = zip)
+    return render_template("custom_pcs/create.html", gpus = gpus, cpus = cpus, rams = rams, motherboards = motherboards, psus = psus)
 
-# @custom_pc_blueprint.route("/custom_pcs" methods=['POST'])
-# def create_new_pc():
-#     name = request.form['name']
-#     total_price = 
-#     gpu =  request.form['gpu_id']
-#     cpu =  request.form['cpu_id']
-#     ram =  request.form['ram_id']
-#     motherboard =  request.form['motherboard_id']
-#     psu =  request.form['psu_id']
-#     custom_pc = Custom_PC(name, total_price, )
+@custom_pc_blueprint.route("/custom_pcs", methods=['POST'])
+def create_new_pc():
+    name = request.form['name']
+    gpu_id = request.form['gpu']
+    cpu_id = request.form['cpu']
+    ram_id = request.form['ram']
+    motherboard_id = request.form['motherboard']
+    psu_id = request.form['psu']
+    
+
+    gpu = gpu_repository.select(gpu_id)
+    cpu = cpu_repository.select(cpu_id)
+    ram = ram_repository.select(ram_id)
+    motherboard = motherboard_repository.select(motherboard_id)
+    psu = psu_repository.select(psu_id)
+    components = [gpu, cpu, ram, motherboard, psu]
+
+    total_price = 0
+    for component in components:
+        total_price += component.price
+
+    custom_pc = Custom_PC(name, total_price, gpu, cpu, ram, motherboard, psu)
+    custom_pc_repository.save(custom_pc)
+    return redirect('/custom_pcs')
+    
