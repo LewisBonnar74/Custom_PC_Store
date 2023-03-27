@@ -44,6 +44,7 @@ def create_new_pc():
     ram = ram_repository.select(ram_id)
     motherboard = motherboard_repository.select(motherboard_id)
     psu = psu_repository.select(psu_id)
+
     components = [gpu, cpu, ram, motherboard, psu]
 
     total_price = 0
