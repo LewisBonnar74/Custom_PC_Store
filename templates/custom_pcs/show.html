@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{custom_pc.name}}</p>
+    <hr>
+    <p>GPU : {{ custom_pc.gpu.name }}</p>
+    <p>CPU : {{ custom_pc.cpu.name }}</p>
+    <p>RAM : {{ custom_pc.ram.name }}</p>
+    <p>Motherboard: {{ custom_pc.motherboard.name }}</p>
+    <p>PSU : {{ custom_pc.psu.name }}</p>
+    <hr>
+    <p><a href="/custom_pcs/{{custom_pc.id}}/edit">Edit</a></p>
+    <hr>
+    <form action="/custom_pcs/{{custom_pc.id}}/delete" method="POST">
+        <button><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+    </form>
+  </div>
+
+{% endblock %}

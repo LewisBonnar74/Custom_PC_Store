@@ -54,4 +54,18 @@ def create_new_pc():
     custom_pc = Custom_PC(name, total_price, gpu, cpu, ram, motherboard, psu)
     custom_pc_repository.save(custom_pc)
     return redirect('/custom_pcs')
+
+@custom_pc_blueprint.route("/custom_pcs/<id>", methods=['GET'])
+def show_custom_pc(id):
+    custom_pc = custom_pc_repository.select(id)
+    return render_template('custom_pcs/show.html', custom_pc = custom_pc)
     
+@custom_pc_blueprint.route("/custom_pcs/<id>/edit", methods=['GET'])
+def edit_custom_pc(id):
+    custom_pc = custom_pc_repository.select(id)
+    gpus = gpu_repository.select_all()
+    cpus = cpu_repository.select_all()
+    rams = ram_repository.select_all()
+    motherboards = motherboard_repository.select_all()
+    psus = psu_repository.select_all()
+    return render_template('custom_pcs/edit.html', custom_pc = custom_pc, gpus = gpus, cpus = cpus, rams = rams, motherboards = motherboards, psus = psus)
