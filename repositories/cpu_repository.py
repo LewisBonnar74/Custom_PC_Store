@@ -45,4 +45,9 @@ def delete(id):
     sql = "DELETE FROM cpus WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(cpu):
+    sql = "UPDATE cpus SET (name, price) = (%s, %s) WHERE id = %s"
+    values = [cpu.name, cpu.price, cpu.id]
+    run_sql(sql, values)
     

@@ -45,3 +45,9 @@ def delete(id):
     sql = "DELETE FROM motherboards WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(motherboard):
+    sql = "UPDATE motherboards SET (name, price) = (%s, %s) WHERE id = %s"
+    values = [motherboard.name, motherboard.price, motherboard.id]
+    run_sql(sql, values)
+    

@@ -45,3 +45,9 @@ def delete(id):
     sql = "DELETE FROM psus WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(psu):
+    sql = "UPDATE psus SET (name, price) = (%s, %s) WHERE id = %s"
+    values = [psu.name, psu.price, psu.id]
+    run_sql(sql, values)
+    

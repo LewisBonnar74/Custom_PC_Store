@@ -61,3 +61,8 @@ def delete(id):
     sql = "DELETE FROM custom_pcs WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(custom_pc):
+    sql = "UPDATE custom_pcs SET (name, total_price, gpu_id, cpu_id, ram_id, motherboard_id, psu_id) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [custom_pc.name, custom_pc.total_price, custom_pc.gpu.id, custom_pc.cpu.id, custom_pc.ram.id, custom_pc.motherboard.id, custom_pc.psu.id, custom_pc.id]
+    run_sql(sql, values)

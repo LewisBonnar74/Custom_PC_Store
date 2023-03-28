@@ -45,3 +45,9 @@ def delete(id):
     sql = "DELETE FROM rams WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(ram):
+    sql = "UPDATE rams SET (name, price) = (%s, %s) WHERE id = %s"
+    values = [ram.name, ram.price, ram.id]
+    run_sql(sql, values)
+    

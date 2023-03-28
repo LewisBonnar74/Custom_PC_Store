@@ -45,3 +45,9 @@ def delete(id):
     sql = "DELETE FROM gpus WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+def update(gpu):
+    sql = "UPDATE gpus SET (name, price) = (%s, %s) WHERE id = %s"
+    values = [gpu.name, gpu.price, gpu.id]
+    run_sql(sql, values)
+    

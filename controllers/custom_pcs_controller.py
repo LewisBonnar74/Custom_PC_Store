@@ -38,7 +38,6 @@ def create_new_pc():
     motherboard_id = request.form['motherboard']
     psu_id = request.form['psu']
     
-
     gpu = gpu_repository.select(gpu_id)
     cpu = cpu_repository.select(cpu_id)
     ram = ram_repository.select(ram_id)
@@ -69,3 +68,34 @@ def edit_custom_pc(id):
     motherboards = motherboard_repository.select_all()
     psus = psu_repository.select_all()
     return render_template('custom_pcs/edit.html', custom_pc = custom_pc, gpus = gpus, cpus = cpus, rams = rams, motherboards = motherboards, psus = psus)
+
+@custom_pc_blueprint.route("/custom_pcs/<id>", methods=['POST'])
+def update_custom_pc(id):
+    name = request.form['name']
+    gpu_id = request.form['gpu']
+    cpu_id = request.form['cpu']
+    ram_id = request.form['ram']
+    motherboard_id = request.form['motherboard']
+    psu_id = request.form['psu']
+    
+    gpu = gpu_repository.select(gpu_id)
+    cpu = cpu_repository.select(cpu_id)
+    ram = ram_repository.select(ram_id)
+    motherboard = motherboard_repository.select(motherboard_id)
+    psu = psu_repository.select(psu_id)
+
+    components = [gpu, cpu, ram, motherboard, psu]
+
+    total_price = 0
+    for component in components:
+        total_price += component.price
+    
+    custom_pc = Custom_PC(name, total_price, gpu, cpu, ram, motherboard, psu, id)
+    custom_pc_repository.update(custom_pc)
+    return redirect('/custom_pcs')
+
+@custom_pc_blueprint.route("/custom_pcs/<id>/delete", methods=['POST'])
+def delete_custom_pc(id):
+    custom_pc_repository.delete(id)
+    return redirect('/custom_pcs')
+

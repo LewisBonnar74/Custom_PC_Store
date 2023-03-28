@@ -6,53 +6,63 @@
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Name" required autofocus>
     </div>
-
     <div>
         <label for="gpu">GPU:</label>
         <select name="gpu" id="gpu" required>
-            <option value="" disabled selected>Choose your GPU</option>
             {% for gpu in gpus %}
-            <option value="{{ gpu.id }}">{{ gpu.name }} - £{{ gpu.price }}</option>
+            <option value="{{ gpu.id }}" 
+            {% if custom_pc.gpu.id == gpu.id %} selected="selected" {% endif %}>
+            {{ gpu.name }}
+            </option>
             {% endfor %}
         </select>
     </div>
     <div>
         <label for="cpu">CPU:</label>
         <select name="cpu" id="cpu" required>
-            <option value="" disabled selected>Choose your CPU</option>
             {% for cpu in cpus %}
-            <option value="{{ cpu.id }}">{{ cpu.name }} - £{{ cpu.price }}</option>
+            <option value="{{ cpu.id }}" 
+            {% if custom_pc.cpu.id == cpu.id %} selected="selected" {% endif %}>
+            {{ cpu.name }}
+            </option>
             {% endfor %}
         </select>
     </div>
     <div>
         <label for="ram">RAM:</label>
         <select name="ram" id="ram" required>
-            <option value="" disabled selected>Choose your RAM</option>
             {% for ram in rams %}
-            <option value="{{ ram.id }}">{{ ram.name }} - £{{ ram.price }}</option>
+            <option value="{{ ram.id }}" 
+            {% if custom_pc.ram.id == ram.id %} selected="selected" {% endif %}>
+            {{ ram.name }}
+            </option>
             {% endfor %}
         </select>
     </div>
     <div>
         <label for="motherboard">Motherboard:</label>
         <select name="motherboard" id="motherboard" required>
-            <option value="" disabled selected>Choose your Motherboard</option>
             {% for motherboard in motherboards %}
-            <option value="{{ motherboard.id }}">{{ motherboard.name }} - £{{ motherboard.price }}</option>
+            <option value="{{ motherboard.id }}" 
+            {% if custom_pc.motherboard.id == motherboard.id %} selected="selected" {% endif %}>
+            {{ motherboard.name }}
+            </option>
             {% endfor %}
         </select>
     </div>
     <div>
         <label for="psu">PSU:</label>
         <select name="psu" id="psu" required>
-            <option value="" disabled selected>Choose your PSU</option>  
             {% for psu in psus %}
-            <option value="{{ psu.id }}">{{ psu.name }} - £{{ psu.price }}</option>
+            <option value="{{ psu.id }}" 
+            {% if custom_pc.psu.id == psu.id %} selected="selected" {% endif %}>
+            {{ psu.name }}
+            </option>
             {% endfor %}
         </select>
     </div>
-    <button type="submit">Create your new PC!</button>
+    <hr>
+    <button type="submit">Update Your PC</button>
 </form>
 
 {% endblock %}
