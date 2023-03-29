@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/pc-icon.png') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Chakra+Petch&family=Raleway&display=swap" rel="stylesheet">
-    <title>Custom <span class="pc-in-logo"> PC </span> Store</title>
+    <title>Custom PC Store</title>
 </head>
 <body>
     <header class="base-header">
-      <h1 class="top-left-logo"><img src="/static/assets/computer-solid.svg"><span>   </span>Custom PC Store</h1>
+      <h1 class="top-left-logo"><img src="/static/assets/computer-solid.svg"><span></span>Custom<span class="pc-in-title"> PC </span>Store</h1>
         <nav class="nav-menu">
           <ul class="list-of-menu-buttons">
-            <li><a href="/" class="home-button">Home</a></li>
-            <li><a href="/custom_pcs" class="view-pcs-button">PCs</a></li>
-            <li><a href="/custom_pcs/create" class="create-pc-button">Create New PC</a></li>
+            <li><a href="/" class="nav-button-effect">Home</a></li>
+            <li><a href="/custom_pcs" class="nav-button-effect">View PCs</a></li>
+            <li><a href="/custom_pcs/create" class="nav-button-effect">Create New PC</a></li>
           </ul>
         </nav>
       </header>

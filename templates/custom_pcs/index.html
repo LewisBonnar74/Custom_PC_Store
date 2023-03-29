@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-    
-
+ <hr>   
+<div>
 {% for custom_pc in all_custom_pcs %}
-<hr>
-    <div>
+
+    <div class="container-for-pc">
         <div>
-              <p><a href="/custom_pcs/{{custom_pc.id}}">{{custom_pc.name}}</a></p>
+              <p><a class="button-effect" href="/custom_pcs/{{custom_pc.id}}">{{custom_pc.name}}</a></p>
                <p>Price: £{{custom_pc.total_price}}</p>
               <div>
                 <p>GPU : {{ custom_pc.gpu.name }}</p>
@@ -17,6 +17,7 @@
               </div>   
         </div>
     </div>
+</div>    
 {% endfor %}
 
 {% endblock %}

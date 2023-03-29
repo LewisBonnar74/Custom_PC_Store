@@ -1,15 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<div>
-    <div>
-        {% set total_price = 0 %}
-            {% for component in components %}
-                {% set total_price = total_price + component.price %}
-            {% endfor %}
-    <p>Total Price: {{ total_price }}</p>
-
-    </div>
-</div>
+<hr>
     <form action="/custom_pcs" method="post">
         <div>
             <label for="name">Name:</label>
