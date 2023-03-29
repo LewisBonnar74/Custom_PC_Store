@@ -87,7 +87,7 @@ psu_repository.select_all()
 prebuilt_pc1 = Custom_PC("High End Prebuilt", gpu4.price+cpu3.price+ram3.price+motherboard1.price+psu1.price, gpu4, cpu3, ram3, motherboard1, psu1)
 custom_pc_repository.save(prebuilt_pc1)
 
-prebuilt_pc2 = Custom_PC("Budget/Midrange Prebuilt", gpu1.price+cpu2.price+ram2.price+motherboard2.price+psu4.price, gpu1, cpu2, ram2, motherboard2, psu4)
+prebuilt_pc2 = Custom_PC("Budget Prebuilt", gpu1.price+cpu2.price+ram2.price+motherboard2.price+psu4.price, gpu1, cpu2, ram2, motherboard2, psu4)
 custom_pc_repository.save(prebuilt_pc2)
 
 

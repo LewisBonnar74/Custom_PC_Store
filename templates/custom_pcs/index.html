@@ -2,22 +2,23 @@
 {% block content %}
  <hr>   
 <div>
-{% for custom_pc in all_custom_pcs %}
+
 
     <div class="container-for-pc">
-        <div>
-              <p><a class="button-effect" href="/custom_pcs/{{custom_pc.id}}">{{custom_pc.name}}</a></p>
-               <p>Price: £{{custom_pc.total_price}}</p>
-              <div>
-                <p>GPU : {{ custom_pc.gpu.name }}</p>
-                <p>CPU : {{ custom_pc.cpu.name }}</p>
-                <p>RAM : {{ custom_pc.ram.name }}</p>
-                <p>Motherboard: {{ custom_pc.motherboard.name }}</p>
-                <p>PSU : {{ custom_pc.psu.name }}</p>
-              </div>   
-        </div>
+        <ul class="ul-for-pc">
+          {% for custom_pc in all_custom_pcs %}
+          <li class="li-for-pc"><a class="button-effect" href="/custom_pcs/{{custom_pc.id}}"><p>{{custom_pc.name}}</p></a>
+              <p class="price">Price: £{{custom_pc.total_price}}</p>
+              <p><span class="gpu-text">GPU</span> : {{ custom_pc.gpu.name }}</p>
+              <p><span class="cpu-text">CPU</span> : {{ custom_pc.cpu.name }}</p>
+              <p><span class="ram-text">RAM</span> : {{ custom_pc.ram.name }}</p>
+              <p><span class="motherboard-text">Motherboard</span>: {{ custom_pc.motherboard.name }}</p>
+              <p><span class="psu-text">PSU</span> : {{ custom_pc.psu.name }}</p></li>
+          {% endfor %}
+      </ul> 
     </div>
+    
 </div>    
-{% endfor %}
+
 
 {% endblock %}

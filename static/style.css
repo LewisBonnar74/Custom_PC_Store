@@ -1,7 +1,7 @@
 body {
     font-family: 'Chakra Petch', sans-serif;
     color: black;
-    background-color: grey;
+    background-color: rgb(99, 99, 99);
 }
 
 .top-left-logo {
@@ -19,7 +19,7 @@ img[src="/static/assets/computer-solid.svg"] {
 }
 
 .base-header {
-    background-color: grey;
+    background-color: rgb(99, 99, 99);
     padding: 5px;
 }
 
@@ -43,7 +43,7 @@ hr {
     color: rgb(220, 21, 21);
     box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
     letter-spacing: 1.5px;
-    font-size: 15px;
+    font-size: 25px;
     transition: all .5s ease;
     text-decoration: none;
 }
@@ -53,6 +53,7 @@ hr {
     background-color: hsl(0, 81%, 47%);
     color: black;
     box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+    cursor: pointer;
 }
    
 .button-effect:active {
@@ -66,7 +67,8 @@ hr {
 
 .nav-button-effect {
     padding: 15px 15px;
-    border-radius: 12px;
+    margin-left: 75px;
+    border-radius: 20px;
     border: 0;
     background-color: rgb(6, 1, 1);
     color: rgb(220, 21, 21);
@@ -139,6 +141,408 @@ img[src="/static/assets/icons8-hand-cursor-50.png"] {
     max-height: 30px;
 }
 
-.container-for-pc {
-    
+.ul-for-pc {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.li-for-pc {
+    background: rgb(220, 22, 22);
+    color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: grid;
+    justify-content: center;
+    list-style: none;
+    border-radius: 12px;
+    font-size: 20px;
+    text-align: center;
+    width: 350px;
+}
+
+.price {
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.gpu-text {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.cpu-text {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.ram-text {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.motherboard-text {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.psu-text {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.input-form-edit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: rgb(220, 20, 20);
+    padding: 50px;
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-top: 100px;
+    border-radius: 12px;
+}
+
+.name-input-edit {
+    margin-left: 30px;
+    background: black;
+    color: rgb(221, 21, 21);
+    border-radius: 12px;
+    border-color: rgb(221, 21, 21);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.gpu-input-edit {
+    padding: 10px;
+}
+
+.gpu-select-edit {
+    margin-left: 45px;
+    margin-top: 20px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.cpu-input-edit {
+    padding: 10px;
+}
+
+.cpu-select-edit {
+    margin-left: 55px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.ram-input-edit {
+    padding: 10px;
+}
+
+.ram-select-edit {
+    margin-left: 50px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.motherboard-input-edit {
+    padding: 10px;
+}
+
+.motherboard-select-edit {
+    margin-right: 60px;
+    margin-left: 70px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.psu-input-edit {
+    padding: 10px;
+}
+
+.psu-select-edit {
+    margin-left: 65px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.create-pc-button {
+    margin-left: 30px;
+    background: black;
+    color: rgb(222, 21, 21);
+    border-radius: 10px;
+    border-color: black;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    background-color: hsl(0, 0%, 0%);
+    color: rgb(221, 21, 21);
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+}
+
+.create-pc-button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(0, 81%, 47%);
+    color: black;
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+.input-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: rgb(220, 20, 20);
+    padding: 50px;
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-top: 100px;
+    border-radius: 12px;
+}
+
+.name-input {
+    margin-left: 67px;
+    background: black;
+    color: rgb(221, 21, 21);
+    border-radius: 12px;
+    border-color: black;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.gpu-input {
+    padding: 10px;
+}
+
+.gpu-select {
+    margin-left: 78px;
+    margin-top: 20px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.cpu-input {
+    padding: 10px;
+}
+
+.cpu-select {
+    margin-left: 85px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.ram-input {
+    padding: 10px;
+}
+
+.ram-select {
+    margin-left: 85px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.motherboard-input {
+    padding: 10px;
+}
+
+.motherboard-select {
+    margin-right: 60px;
+    margin-left: 60px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.psu-input {
+    padding: 10px;
+}
+
+.psu-select {
+    margin-left: 87px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 15px;
+}
+
+.update-pc-button {
+    margin-left: 10px;
+    background: black;
+    color: rgb(222, 21, 21);
+    border-radius: 10px;
+    border-color: black;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    background-color: hsl(0, 0%, 0%);
+    color: rgb(221, 21, 21);
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+}
+
+.update-pc-button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(0, 81%, 47%);
+    color: black;
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+.show-pc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: rgb(220, 20, 20);
+    padding: 50px;
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-top: 100px;
+    border-radius: 12px;
+}
+
+.name-show {
+    margin-left: 10px;
+    background: black;
+    color: rgb(221, 21, 21);
+    border-radius: 12px;
+    border-color: black;
+    padding: 5px;
+    font-size: 35px;
+}
+
+.price-show {
+    margin-left: 10px;
+    margin-top: 10px;
+    background: black;
+    color: rgb(221, 21, 21);
+    border-radius: 12px;
+    border-color: black;
+    padding: 5px;
+    font-size: 35px;
+}
+
+.gpu-show {
+    margin-left: 10px;
+    margin-top: 20px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.cpu-show {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.ram-show {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.motherboard-show {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.psu-show {
+    margin-left: 10px;
+    margin-top: 10px;
+    border-color: black;
+    border-radius: 12px;
+    background-color: black;
+    color: rgb(221, 20, 20);
+    padding: 5px;
+    font-size: 20px;
+}
+
+.container-for-edit-pc-button {
+    margin-top: 40px;
+}
+
+.delete-pc-button {
+    margin-left: 10px;
+    margin-top: 30px;
+    background: black;
+    color: rgb(222, 21, 21);
+    border-radius: 10px;
+    border-color: black;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    background-color: hsl(0, 0%, 0%);
+    color: rgb(221, 21, 21);
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+    text-decoration: none;
+}
+
+.delete-pc-button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(0, 81%, 47%);
+    color: black;
+    box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
+    cursor: pointer;
+}
+
+.container-for-delete-pc-button {
+    margin-top: 10px;
 }

@@ -1,21 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
 <hr>
-  <div>
-    <p>{{custom_pc.name}}</p>
-    <hr>
-    <span> Price: £{{custom_pc.total_price}}</span>
-    <hr>
-    <p>GPU : {{ custom_pc.gpu.name }}</p>
-    <p>CPU : {{ custom_pc.cpu.name }}</p>
-    <p>RAM : {{ custom_pc.ram.name }}</p>
-    <p>Motherboard: {{ custom_pc.motherboard.name }}</p>
-    <p>PSU : {{ custom_pc.psu.name }}</p>
-    <hr>
-    <p><a href="/custom_pcs/{{custom_pc.id}}/edit">Edit</a></p>
-    <hr>
-    <form action="/custom_pcs/{{custom_pc.id}}/delete" method="POST">
-        <button><i class="fa fa-trash-o fa-3x" style="color:red" aria-hidden="true"></i></button>
+  <div class="show-pc">
+    <div class="name-show">{{custom_pc.name}}</div>
+  
+    <span class="price-show"> Price: £{{custom_pc.total_price}}</span>
+    
+    <div class="gpu-show">GPU : {{ custom_pc.gpu.name }}</div>
+    <div class="cpu-show">CPU : {{ custom_pc.cpu.name }}</div>
+    <div class="ram-show">RAM : {{ custom_pc.ram.name }}</div>
+    <div class="motherboard-show">Motherboard: {{ custom_pc.motherboard.name }}</div>
+    <div class="psu-show">PSU : {{ custom_pc.psu.name }}</div>
+    <div class="container-for-edit-pc-button"><a  class="button-effect" href="/custom_pcs/{{custom_pc.id}}/edit">Edit your build!</a></div>
+    <form class="container-for-delete-pc-button" action="/custom_pcs/{{custom_pc.id}}/delete" method="POST">
+        <button class="button-effect">Delete PC</button>
     </form>
   </div>
 
