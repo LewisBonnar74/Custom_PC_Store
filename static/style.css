@@ -1,0 +1,117 @@
+body {
+    font-family: 'Chakra Petch', sans-serif;
+    color: black;
+    background-color: grey;
+}
+
+.top-left-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.pc-in-logo {
+    color: red;
+}
+
+img[src="/static/assets/computer-solid.svg"] {
+    max-width: 35px;
+}
+
+.base-header {
+    background-color: grey;
+    padding: 5px;
+}
+
+hr {
+    border-radius: 5px;
+    border-color: black;
+}
+
+/* .nav-menu {
+    /* background-color: black; */
+/* }  */
+
+.list-of-menu-buttons {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+}
+
+a:visited {
+    color: white;
+}
+
+.home-button {
+    text-decoration: none;
+    padding: 10px;
+    background-color: black;
+    border-radius: 12px;
+}
+
+.view-pcs-button {
+    text-decoration: none;
+    padding: 10px;
+    background-color: black;
+    border-radius: 12px;
+}
+
+.create-pc-button {
+    text-decoration: none;
+    padding: 10px;
+    background-color: black;
+    border-radius: 12px;
+}
+
+/* img[src = "/static/assets/fire-solid.svg"] {
+    max-width: 15px;
+    justify-content: center;
+    text-align: center;
+} */
+
+.welcome-message {
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    margin-left: 550px;
+    margin-right: 550px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.home-page-text {
+    font-size: 1.9rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 100px;
+    margin-left: 550px;
+    margin-right: 550px;
+    margin-bottom: 100px;
+    padding: 30px;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+}
+
+.links-message {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 12px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+img[src="/static/assets/icons8-hand-cursor-50.png"] {
+    max-width: 30px;
+    max-height: 30px;
+}

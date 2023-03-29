@@ -12,7 +12,7 @@
             {% for gpu in gpus %}
             <option value="{{ gpu.id }}" 
             {% if custom_pc.gpu.id == gpu.id %} selected="selected" {% endif %}>
-            {{ gpu.name }}
+            {{ gpu.name }} - £{{ gpu.price }}
             </option>
             {% endfor %}
         </select>
@@ -23,7 +23,7 @@
             {% for cpu in cpus %}
             <option value="{{ cpu.id }}" 
             {% if custom_pc.cpu.id == cpu.id %} selected="selected" {% endif %}>
-            {{ cpu.name }}
+            {{ cpu.name }} - £{{cpu.price}}
             </option>
             {% endfor %}
         </select>
@@ -34,7 +34,7 @@
             {% for ram in rams %}
             <option value="{{ ram.id }}" 
             {% if custom_pc.ram.id == ram.id %} selected="selected" {% endif %}>
-            {{ ram.name }}
+            {{ ram.name }} - £{{ ram.price }}
             </option>
             {% endfor %}
         </select>
@@ -45,7 +45,7 @@
             {% for motherboard in motherboards %}
             <option value="{{ motherboard.id }}" 
             {% if custom_pc.motherboard.id == motherboard.id %} selected="selected" {% endif %}>
-            {{ motherboard.name }}
+            {{ motherboard.name }} - £{{ motherboard.price }}
             </option>
             {% endfor %}
         </select>
@@ -56,7 +56,7 @@
             {% for psu in psus %}
             <option value="{{ psu.id }}" 
             {% if custom_pc.psu.id == psu.id %} selected="selected" {% endif %}>
-            {{ psu.name }}
+            {{ psu.name }} - £{{ psu.price }}
             </option>
             {% endfor %}
         </select>
