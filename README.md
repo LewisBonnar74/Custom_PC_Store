@@ -19,8 +19,8 @@ Get a performance mark based on the components you have selected.
 
 ## How to run
 - Requirements
-    - flask (`pip3 flask` if you have pip3 installed. Which you most likely do.)
-    - psychopg2 (`pip3 psychopg2`)
+    - flask
+    - psychopg2
     - postgres
     
 - Open your terminal
