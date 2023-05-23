@@ -26,4 +26,4 @@ Get a performance mark based on the components you have selected.
 - Open your terminal
 - Clone this repository
 - In the main directory type `flask run`
-- Then in Chrome, type in the search bar 'localhost:7777' and hit enter
+- Then in Chrome, type in the search bar `localhost:7777` and hit enter
